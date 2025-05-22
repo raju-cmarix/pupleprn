@@ -1,0 +1,324 @@
+@import "../../../assets/scss/variable.scss";
+
+.invoice-title-header {
+  background-color: #e6f6f4;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 13px;
+    color: $primary;
+    font-weight: $fw700;
+    margin-top: 1rem;
+  }
+}
+
+.invoice-section {
+  p {
+    font-size: 14px;
+
+    @include md {
+      font-size: $ft-h6;
+    }
+  }
+
+  .title {
+    text-align: left;
+    margin-bottom: 15px;
+
+    h1 {
+      font-size: $ft-h5;
+      font-weight: $fw700;
+      color: $primary;
+
+      @include md {
+        font-size: $ft-h6;
+      }
+    }
+  }
+
+  h3 {
+    font-size: $ft-h5;
+    margin-bottom: 40px;
+    color: $primary;
+    margin-top: 40px;
+
+    @include md {
+      font-size: $ft-h6;
+    }
+  }
+
+  .invoice-accordian {
+    .accordion-item {
+      &:last-child {
+        .accordion-button {
+          &:last-child {
+            border-bottom: 1px solid $dark_secondary1;
+          }
+        }
+        padding-bottom: 0px;
+      }
+
+      .accordion-header {
+        margin-bottom: 10px;
+        .accordion-button {
+          font-size: $ft-h5;
+          font-weight: $fw600;
+          color: $primary;
+          border-top: 1px solid $dark_secondary1;
+          padding: 20px 40px 0px 15px;
+          position: relative;
+          display: block;
+          position: relative;
+
+          .accordion-content {
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(200px, 1fr)
+            ); // Adjust columns based on space
+            grid-gap: 30px; // Add space between grid items
+
+            p {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              color: #80798b;
+
+              &.address-label {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: #80798b;
+                margin-bottom: 0px;
+              }
+            }
+            .toggle-switch {
+              position: relative;
+              display: inline-block;
+              width: 50px;
+              height: 23px;
+              margin-left: 10px;
+
+              input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
+
+              .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 25px;
+                background-color: $slider-background-color; // Default color
+                transition: $slider-transition; // Smooth transition
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  height: 20px;
+                  width: 20px;
+                  border-radius: 25px;
+                  left: 1px;
+                  bottom: 2px;
+                  background-color: white;
+                  transition: $slider-transition;
+                }
+
+                &.round {
+                  border-radius: 15px; // For rounded slider
+                  &:before {
+                    border-radius: 50%; // Round knob
+                  }
+                }
+              }
+
+              input:checked + .slider {
+                background-color: $slider-checked-color; // Color when checked
+
+                &:before {
+                  transform: translateX(
+                    $slider-width - $slider-knob-size - 4px
+                  ); // Move the knob to the right
+                }
+              }
+            }
+          }
+
+          @include md {
+            font-size: $ft-h6;
+            padding: 15px 30px 15px 15px;
+          }
+
+          &::after {
+            // ../../../assets/images/icons/slider-right.svg
+            background: url("../../../assets/images/icons/slider-right.svg")
+              no-repeat;
+            height: 24px;
+            transform: rotate(90deg);
+            @include trans3;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 12px;
+            width: 14px;
+
+            @include md {
+              background-size: 70%;
+            }
+          }
+
+          &:not(.collapsed)::after {
+            transform: rotate(-90deg);
+            @include trans3;
+          }
+
+          &:not(.collapsed) {
+            background-color: transparent;
+          }
+        }
+
+        h6 {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .accordion-body {
+        padding: 0px;
+        border-radius: 20px;
+
+        &.confirm-shift-table {
+          // .rdt_TableCell,
+          // .rdt_TableCol {
+          //   min-width: 85px;
+          //   padding: 0px 12px;
+          // }
+
+          .rdt_TableCell {
+            div {
+              &:first-child {
+                white-space: inherit;
+                overflow: visible;
+                text-overflow: inherit;
+              }
+            }
+          }
+        }
+
+        .rdt_TableHeadRow {
+          background: #e6f6f4;
+          border-bottom: 0;
+        }
+
+        .rdt_TableCol {
+          text-transform: capitalize;
+          font-weight: $fw700;
+          color: $primary;
+        }
+
+        .rdt_TableBody {
+          .rdt_TableRow {
+            border-bottom: 1px dashed #80d3cb;
+
+            &:last-child {
+              border: 0;
+            }
+
+            .rdt_TableCell {
+              font-weight: $fw400;
+              font-size: $ft-h7;
+              line-height: 15px;
+              color: $gray;
+
+              .text-secondary {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $secondary !important;
+              }
+
+              .text-primary {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $primary !important;
+              }
+
+              .text-danger {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $red !important;
+              }
+
+              .text-gray {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $gray !important;
+              }
+
+              a {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $primary !important;
+              }
+            }
+          }
+        }
+
+        .rdt_Pagination {
+          color: $gray;
+          justify-content: center !important;
+          border-top: 1px dashed #80d3cb;
+
+          select {
+            color: $primary;
+          }
+
+          button {
+            color: $primary;
+            fill: $primary;
+
+            &:disabled {
+              fill: $light_primary;
+              color: $light_primary;
+            }
+          }
+
+          @media screen and (max-width: 599px) {
+            > div {
+              justify-content: center !important;
+            }
+          }
+        }
+
+        .rdt_TableCol_Sortable {
+          > div {
+            overflow: visible;
+            white-space: inherit;
+            text-overflow: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.centered-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}

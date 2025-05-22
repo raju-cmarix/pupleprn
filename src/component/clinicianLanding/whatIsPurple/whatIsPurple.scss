@@ -1,0 +1,117 @@
+@import "../../../assets/scss/variable.scss";
+
+.what-is-purple {
+    margin-bottom: 120px;
+    margin-top: -120px;
+    @include lg {
+        margin-top: 0px;
+    }
+    .title {
+        h2 {
+            @include sm {
+                // font-size: 24px;
+            }
+        }
+    }
+
+
+    .what-purple-content {
+        display: flex;
+        justify-content: center;
+        font-size: $ft-h5;
+        margin-bottom: 20px;
+        @include lg {
+            flex-wrap: wrap;
+        }
+
+        @include md {
+            font-size: $ft-h6;
+        }
+
+        >div {
+            width: 50%;
+            padding: 0 10px;
+            @include md {
+                width: 100%;
+                padding: 0;
+                &:first-child{
+                    margin-bottom: 20px ;
+                }
+            }
+        }
+
+        .what-purple-right-content {
+
+            .common-uses-list {
+                li {
+                    list-style: none;
+                    position: relative;
+                    color: $gray;
+                    margin-bottom: 5px;
+
+                    &::before {
+                        content: '1';
+                        position: absolute;
+                        top: 4px;
+                        left: -30px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: $secondary;
+                        font-size: 14px;
+                        color: $white;
+                        font-weight: $fw700;
+                        text-align: center;
+                    }
+                    &:nth-child(2){
+                        &::before{
+                            content: '2';
+                        }
+                    }
+                    &:nth-child(3){
+                        &::before{
+                            content: '3';
+                        }
+                    }
+                    &:nth-child(4){
+                        &::before{
+                            content: '4';
+                        }
+                    }
+                    &:nth-child(5){
+                        &::before{
+                            content: '5';
+                        }
+                    }
+                    &:nth-child(6){
+                        &::before{
+                            content: '6';
+                        }
+                    }
+                    &:nth-child(7){
+                        &::before{
+                            content: '7';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .what-purple-btn{
+        text-align: center;
+        .pt-btn { 
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            line-height: 60px;
+            padding: 0px 10px;
+            &:hover {
+              color: $white;
+            }
+    
+            @include md {
+              line-height: 40px;
+            }
+          }
+    }
+}

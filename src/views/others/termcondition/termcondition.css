@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.termcondition-section {
+  padding: 100px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.termcondition-section .title {
+  text-align: left;
+}
+.termcondition-section .title h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+}
+.termcondition-section .termcondition-content .condition-box {
+  margin-bottom: 40px;
+}
+.termcondition-section .termcondition-content .condition-box .condition-subtitle {
+  color: #382768;
+  margin-bottom: 20px;
+}
+.termcondition-section .termcondition-content .condition-box p {
+  font-weight: 400;
+}
+.termcondition-section .termcondition-content .condition-box p a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+  transition: 0.5s ease-in-out;
+}
+.termcondition-section .termcondition-content .condition-box p a:hover {
+  color: #01A796;
+}
+.termcondition-section .termcondition-content .condition-box ol,
+.termcondition-section .termcondition-content .condition-box ul {
+  margin-bottom: 40px;
+}
+.termcondition-section .termcondition-content .condition-box li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+}
+.termcondition-section .termcondition-content .condition-box li::marker {
+  color: #382768;
+}
+.termcondition-section .termcondition-content .condition-box li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+  transition: 0.5s ease-in-out;
+}
+.termcondition-section .termcondition-content .condition-box li a:hover {
+  color: #01A796;
+}
+.termcondition-section .termcondition-content .condition-box ol ul,
+.termcondition-section .termcondition-content .condition-box ol ol {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #80798B;
+}
+.termcondition-section .termcondition-content .condition-box ol ul li,
+.termcondition-section .termcondition-content .condition-box ol ol li {
+  font-size: 18px;
+  font-weight: 400;
+  color: #80798B;
+}
+.termcondition-section .termcondition-content .condition-box ol ul li::marker,
+.termcondition-section .termcondition-content .condition-box ol ol li::marker {
+  color: #01A796;
+}
+.termcondition-section .termcondition-content .condition-box ol ul li {
+  list-style: disc;
+}
+.termcondition-section .termcondition-content .condition-box .register {
+  margin-bottom: 0;
+}
+.termcondition-section .termcondition-content .condition-box .register li {
+  font-size: 18px;
+  font-weight: 400;
+  color: #80798B;
+}
+.termcondition-section .termcondition-content .condition-box .register li::marker {
+  color: #01A796;
+}/*# sourceMappingURL=termcondition.css.map */

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.what-people-say {
+  margin-bottom: 120px;
+}
+.what-people-say .title {
+  text-align: left;
+  margin-bottom: 24px;
+}
+.what-people-say .title h2 {
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  .what-people-say .title {
+    margin-top: 32px;
+  }
+}
+.what-people-say .what-people-slider {
+  padding: 24px;
+  border-radius: 40px;
+  background-color: #F2F8F8;
+}
+.what-people-say .what-people-slider .what-people-content p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 48px;
+}
+.what-people-say .what-people-slider .what-people-content > div {
+  color: #382768;
+}
+.what-people-say .what-people-slider .what-people-content > div span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.what-people-say .what-people-slider .what-people-content > div p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #382768;
+  margin-bottom: 0;
+}
+.what-people-say .what-people-slider .slick-prev,
+.what-people-say .what-people-slider .slick-next {
+  height: 36px;
+  width: 36px;
+  background: #F2F8F8;
+  border: 1px solid #A5DFD9;
+  border-radius: 50%;
+  background-image: url(../../../assets/images/icons/slider-right.svg);
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  right: 0;
+  left: auto;
+  top: auto;
+  bottom: -18px;
+  z-index: 1;
+}
+.what-people-say .what-people-slider .slick-prev::before,
+.what-people-say .what-people-slider .slick-next::before {
+  display: none;
+}
+.what-people-say .what-people-slider .slick-prev {
+  transform: rotateZ(180deg);
+  right: 48px;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .what-people-say {
+    margin-bottom: 80px;
+  }
+}/*# sourceMappingURL=whatPeopleSay.css.map */

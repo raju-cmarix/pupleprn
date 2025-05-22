@@ -1,0 +1,74 @@
+@import "../../../assets/scss/variable.scss";
+
+.get-started-main {
+  margin-bottom: 120px;
+  margin-top: 120px;
+  h4 {
+    margin-bottom: 24px;
+    font-size: $ft-h3;
+  }
+  .get-started-content {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: center;
+    @include md {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+    .whats-box {
+      width: calc(50% - 12px);
+      margin-left: 12px;
+      padding: $padding24;
+      background: $light_secondary2;
+      border-radius: 40px;
+      text-align: center;
+      &:first-child {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+      svg {
+        margin-bottom: 24px;
+      }
+      h5 {
+        font-size: $ft-h5;
+        line-height: 22px;
+        margin-bottom: 12px;
+      }
+      ul {
+        text-align: left;
+        list-style: none;
+        li {
+          font-weight: $fw400;
+          font-size: $ft-h5;
+          line-height: 22px;
+          color: $gray;
+          margin-bottom: 12px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: -25px;
+            width: 6px;
+            height: 6px;
+            border-radius: 6px;
+            background-color: $secondary;
+          }
+        }
+      }
+      p {
+        font-size: $ft-h5;
+      }
+      @include md {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0 !important;
+      }
+    }
+  }
+  .our-benefit-btn {
+    text-align: center;
+    margin-top: 40px;
+  }
+}

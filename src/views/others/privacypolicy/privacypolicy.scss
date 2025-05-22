@@ -1,0 +1,125 @@
+@import "../../../assets/scss/variable.scss";
+
+.privacy-section {
+  padding: 100px 0;
+  font-size: $ft-h5;
+  font-weight: $fw700;
+
+  .title {
+    text-align: left;
+    @include md {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: $ft-h5;
+      font-weight: $fw700;
+      color: $primary;
+      @include md {
+        font-size: $ft-h6;
+      }
+    }
+  }
+
+  .privacy-content {
+    text-align: justify;
+    @include md {
+      font-size: $ft-h6;
+    }
+    .privacycontentbox {
+      margin-bottom: 40px;
+
+      .privacy-subtitle {
+        color: $primary;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-weight: $fw400;
+
+        a {
+          text-decoration: none;
+          font-size: $ft-h5;
+          font-weight: $fw700;
+          color: $primary;
+          @include trans5;
+
+          &:hover {
+            color: $secondary;
+          }
+          @include md {
+            font-size: $ft-h6;
+          }
+        }
+      }
+
+      ol,
+      ul,
+      li {
+        font-weight: $fw400;
+        color: $gray;
+        margin-bottom: 15px;
+        a {
+          text-decoration: none;
+          font-size: $ft-h5;
+          font-weight: $fw700;
+          color: $primary;
+          word-break: break-word;
+          @include trans5;
+          @include md {
+            font-size: $ft-h6;
+          }
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+
+      .privacy-residents {
+        li {
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      &.rights-choices {
+        ul,
+        ol {
+          padding-left: 20px;
+
+          li {
+            font-size: $ft-h5;
+            font-weight: $fw700;
+            color: $primary;
+            @include md {
+              font-size: $ft-h6;
+            }
+
+            &::marker {
+              color: $primary;
+            }
+          }
+
+          ul {
+            li {
+              font-weight: $fw400;
+              color: $gray;
+              list-style: disc;
+            }
+          }
+        }
+
+        .provider {
+          li {
+            font-weight: $fw400;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "header": {
+    "text1": "Home",
+    "text2": "Angebotsübersicht",
+    "text3": "Über uns",
+    "text4": "Kontakt"
+  },
+  "error": {
+    "heading": "404"
+  }
+}

@@ -1,0 +1,358 @@
+@import "../../assets/scss/variable.scss";
+
+
+.clinicianjob-main {
+    padding: 100px 15px $padding60;
+
+    .custom-container {
+        padding: 0;
+
+        @include lg {
+            padding: 0;
+        }
+    }
+
+    .back-to-search {
+        margin-bottom: 40px;
+
+        a {
+            color: $gray;
+            font-size: $ft-h7;
+            margin-left: 12px;
+            text-decoration: none;
+            font-weight: $fw700;
+            @include trans3;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+    }
+
+    .man-profile {
+        margin-bottom: 50px;
+
+        @include md{
+            margin-bottom: 0;
+        }
+
+        .left-profile {
+            .row {
+                // align-items: center;
+            }
+
+            .profile-image {
+                width: 150px;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 12px;
+                }
+
+                @include sm {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+            }
+
+            .profile-content {
+                width: 100%;
+                padding-left: 160px;
+                margin-left: -150px;
+
+                @include sm {
+                    padding-left: 10px;
+                    margin-left: 0;
+                }
+
+                h3 {
+                    font-size: $ft-h5;
+
+                    @include md {
+                        font-size: $ft-h6;
+                    }
+                }
+
+                p {
+                    font-size: $ft-h7;
+                    word-break: break-word;
+                    text-align: justify;
+                    margin-bottom: 0px !important;
+                }
+
+                .jona-links {
+                    .nav-item {
+                        padding-right: 30px;
+
+                        a {
+                            font-weight: $fw700;
+                            color: $primary;
+                            font-size: $ft-h7;
+                            padding: 0;
+                            position: relative;
+                            padding-left: 20px;
+
+                            span {
+                                position: absolute;
+                                top: -1px;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .profile-btn {
+            align-self: center;
+            text-align: right;
+
+            @include md {
+                text-align: center;
+                margin-top: 25px;
+            }
+        }
+
+    }
+
+    .general-content {
+        >div {
+            padding-bottom: $padding24;
+            margin-bottom: $padding24;
+            border-bottom: 1px dashed $light_secondary1;
+        }
+
+        .general-detail {
+            font-size: $ft-h5;
+
+            @include md {
+                font-size: $ft-h6;
+            }
+
+            ul {
+                padding-left: 0;
+                margin-bottom: 0;
+
+                li {
+                    display: flex;
+                    list-style: none;
+                    position: relative;
+                    color: $gray;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    margin-bottom: 15px;
+
+                    span {
+                        color: $primary;
+                        font-weight: $fw700;
+                        margin-right: 5px;
+                        flex-shrink: 0;
+                    }
+                }
+
+                .includes {
+                    width: 100%;
+                    font-size: 12px;
+                    margin: -5px 0 0 145px;
+
+                    @include md {
+                        margin-left: 115px;
+                    }
+                }
+            }
+
+            &.general-dress {
+                ul {
+                    li {
+                        &:last-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
+            &.aboutfacility-photo {
+                h3 {
+                    font-size: $ft-h5;
+                    color: $primary;
+                    margin-bottom: 20px;
+                }
+
+                .facility-images {
+
+                    .img {
+                        display: flex;
+                        gap: 12px;
+                        flex-wrap: wrap;
+
+                        img {
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 12px;
+                            border: 0.5px solid #80d3cb;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.review-content {
+            .review-cards {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border-bottom: 1px dashed transparent;
+
+                .card {
+                    border-radius: 40px;
+                    border: 1px solid $light_gray;
+                    padding: 20px;
+                    margin-bottom: 10px;
+
+                    p {
+                        font-size: $ft-h5;
+                        font-weight: $fw500;
+
+                        @include md {
+                            font-size: $ft-h6;
+                        }
+                    }
+
+                    h3 {
+                        font-size: $ft-h5;
+
+                        span {
+                            display: inline-block;
+                            margin-right: 15px;
+
+                            img {
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 12px;
+                            }
+                        }
+                    }
+
+                    .card-btm {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .reviewrating {
+                            font-weight: $fw700;
+                            color: $primary;
+                            position: relative;
+                            padding-left: 30px;
+
+                            @include md {
+                                font-size: $ft-h6;
+                            }
+
+                            span {
+                                position: absolute;
+                                left: 0;
+                                top: -2px;
+                            }
+                        }
+
+                        .reviewdate {
+                            font-size: $ft-h5;
+                            font-weight: $fw500;
+                            color: $gray;
+
+                            @include md {
+                                font-size: $ft-h6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    ul.nav.nav-tabs {
+        border-color: $light_secondary1;
+        margin-bottom: 30px;
+
+        li.nav-item {
+            .nav-link {
+                font-size: $ft-h5;
+                padding: 9px $padding32;
+                margin: 0;
+                margin-right: $padding12;
+                border-radius: 6px 6px 0px 0px;
+                min-width: 240px;
+                text-align: center;
+                font-weight: $fw700;
+                color: $gray;
+                border: 0;
+                cursor: pointer;
+
+                &.active {
+                    color: $primary;
+                    background-color: $light_secondary2;
+                }
+
+                @include lg {
+                    font-size: $ft-h6;
+                    min-width: 140px;
+                }
+
+                @include md {
+                    font-size: $ft-h7;
+                    min-width: inherit;
+                    padding: 9px $padding6;
+                    margin-right: $padding6;
+                }
+            }
+        }
+    }
+
+
+}
+
+.stripe-applicant {
+    .applicant-box {
+        position: relative;
+
+        .applicant-btn {
+            justify-content: space-between !important;
+
+            h3 {
+                margin-bottom: 0;
+                font-size: 15px;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+        }
+    }
+}
+
+.editpay-modal {
+    .pay-select {
+        margin-bottom: 40px;
+    }
+}
+
+.thirdmodal .dashed-border {
+    margin: -7px 42px 5px auto !important;
+    width: 89% !important;
+}
+
+.fourthmodal {
+    .react-dropdown-select {
+        width: 82px;
+        padding: 10px !important;
+    }
+}
+
+.react-datepicker__input-container .form-control {
+    background-image: none !important;
+}

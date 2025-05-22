@@ -1,0 +1,143 @@
+@import "../../../assets/scss/variable.scss";
+
+.what-people-say {
+    margin-bottom: 120px;
+    margin-top: 120px;
+
+    .title {
+        text-align: left;
+        margin-bottom: $padding24;
+
+        h2 {
+            justify-content: flex-start;
+        }
+
+        @include md {
+            margin-top: $padding32;
+        }
+    }
+
+    .align-self-md-center {
+        @include md {
+            text-align: center;
+        }
+    }
+
+    .what-people-slider {
+        padding: $padding24;
+        border-radius: 40px;
+        background-color: $light_secondary2;
+
+        .what-people-content {
+            position: relative;
+            height: 320px;
+
+            @include lg {
+                height: 410px;
+            }
+
+            @include md {
+                height: 250px;
+            }
+
+            @include sm {
+                height: 460px;
+            }
+
+            p {
+                font-size: $ft-h5;
+                line-height: 22px;
+                margin-bottom: $padding48;
+
+                @include md {
+                    font-size: $ft-h6;
+                }
+            }
+
+            >div {
+                color: $primary;
+
+                span {
+                    font-weight: $fw600;
+                    font-size: $ft-h5;
+                    line-height: 22px;
+                }
+
+                p {
+                    font-weight: $fw400;
+                    font-size: $ft-h5;
+                    line-height: 22px;
+                    color: $primary;
+                    margin-bottom: 0;
+                }
+            }
+
+            .what-people-sub {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            height: 36px;
+            width: 36px;
+            background: #F2F8F8;
+            border: 1px solid #A5DFD9;
+            border-radius: 50%;
+            background-image: url(../../../assets/images/icons/slider-right.svg);
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            right: 0;
+            left: auto;
+            top: auto;
+            bottom: 8px;
+            z-index: 1;
+
+            &::before {
+                display: none;
+            }
+
+            @include sm {
+                bottom: 26px;
+            }
+
+            &.slick-disabled {
+                transform: rotateZ(180deg);
+                background-image: url(../../../assets/images/icons/fadeslider-left.png);
+                bottom: 25px;
+                background-position: 9px center;
+
+                @include sm {
+                    bottom: 45px;
+                }
+            }
+        }
+
+        .slick-prev {
+            transform: rotateZ(180deg);
+            right: 48px;
+            bottom: 25px;
+            background-position: 10px center;
+
+            @include sm {
+                bottom: 45px;
+            }
+
+            &.slick-disabled {
+                transform: rotateZ(0deg);
+                background-image: url(../../../assets/images/icons/fadeslider-left.png);
+                background-position: 10px center;
+                @include sm {
+                    bottom: 45px;
+                }
+            }
+
+        }
+    }
+
+    @include md {
+        margin-bottom: 80px;
+        margin-top: 80px;
+    }
+}

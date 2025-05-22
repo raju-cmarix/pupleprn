@@ -1,0 +1,123 @@
+@import "../../../assets/scss/variable.scss";
+
+.faq-section {
+  padding: 100px 0;
+
+  p {
+    font-size: 15px;
+
+    @include md {
+      font-size: $ft-h6;
+    }
+  }
+
+  // .faq-des {
+  //     margin-bottom: 40px;
+  // }
+
+  .title {
+    text-align: left;
+    margin-bottom: 15px;
+
+    h1 {
+      font-size: $ft-h5;
+      font-weight: $fw700;
+      color: $primary;
+
+      @include md {
+        font-size: $ft-h6;
+      }
+    }
+  }
+
+  h3 {
+    font-size: $ft-h5;
+    margin-bottom: 40px;
+    color: $primary;
+    margin-top: 40px;
+
+    @include md {
+      font-size: $ft-h6;
+    }
+  }
+
+  .faq-accordian {
+    .accordion-item {
+      &:last-child {
+        .accordion-button {
+          &:last-child {
+            border-bottom: 1px solid $dark_secondary1;
+          }
+        }
+      }
+
+      .accordion-header {
+        .accordion-button {
+          font-size: $ft-h5;
+          font-weight: $fw600;
+          color: $primary;
+          border-top: 1px solid $dark_secondary1;
+          padding: 25px 40px 15px 15px;
+          position: relative;
+
+          @include md {
+            font-size: $ft-h6;
+            padding: 15px 30px 15px 15px;
+          }
+
+          &::after {
+            background: url(../../../assets/images/icons/slider-right.svg)
+              no-repeat;
+            height: 24px;
+            transform: rotate(90deg);
+            @include trans3;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 12px;
+            width: 14px;
+
+            @include md {
+              background-size: 70%;
+            }
+          }
+
+          &:not(.collapsed)::after {
+            transform: rotate(-90deg);
+            @include trans3;
+          }
+
+          &:not(.collapsed) {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .accordion-body {
+        p {
+          a {
+            text-decoration: none;
+            font-weight: $fw700;
+            color: $secondary;
+            @include trans3;
+            font-size: 15px;
+
+            @include md {
+              font-size: $ft-h6;
+            }
+
+            &:hover {
+              color: $dark_secondary;
+            }
+          }
+
+          .underline-colored {
+            text-decoration: underline;
+            text-decoration-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

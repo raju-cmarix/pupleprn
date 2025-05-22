@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.purpleprn.android",
+      "sha256_cert_fingerprints": [
+        "C0:6A:5E:FD:58:D7:6B:AF:6F:43:A8:78:3E:D0:C9:E6:DA:39:96:AA:AB:82:A1:BA:24:0E:DD:D1:CF:D7:E7:AC",
+        "2D:0F:92:7F:79:3B:1F:7D:1F:F9:B5:FF:0F:AE:10:90:FF:31:9B:A5:F9:83:6C:0C:CD:86:D2:B4:A9:6F:9B:F1",
+        "C3:AE:4B:E4:89:08:7E:CF:D8:B2:F4:9A:E3:42:8C:CE:A1:DD:03:35:BA:3B:80:A9:86:65:FA:EB:EB:8C:E5:DC"
+      ]
+    }
+  }
+]

@@ -1,0 +1,75 @@
+@import "../../../assets/scss/variable.scss";
+
+.get-started-main{
+    margin-bottom: 120px;
+    h4{
+        margin-bottom: 24px;
+        font-size: $ft-h3;
+    }
+    .get-started-content{
+        display: flex;
+        .whats-box{
+            width: calc(50% - 12px);
+            margin-left: 12px;
+            padding: $padding24;
+            background: $light_secondary2;
+            border-radius: 40px;
+            text-align: center;
+            &:first-child{
+                margin-left: 0;
+                margin-right: 12px;
+            }
+            svg{
+                margin-bottom: 24px;
+            }
+            h5{
+                font-size: $ft-h5;
+                line-height: 22px;
+                margin-bottom: 12px;
+            }
+            ul{
+                text-align: left;
+                list-style: none;
+                padding: 0;
+                li{
+                    font-weight: $fw400;
+                    font-size: $ft-h5;
+                    line-height: 22px;
+                    color: $gray;
+                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: flex-start;
+                    span{
+                        height: 20px;
+                        width: 20px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $secondary;
+                        color: $white;
+                        margin-right: 12px;
+                        border-radius: 50%;
+                        font-weight: $fw700;
+                        font-size: $ft-h6;
+                        line-height: 17px;
+                    }
+                    p{
+                        margin-bottom: 0;
+                        display: inline-block;
+                        width: calc(100% - 32px);
+                    }
+                }
+            }
+            @include md{
+                width: 100%;
+                margin-bottom: $padding24;
+            }
+        }
+        @include md{
+            flex-wrap: wrap;
+        }
+    }
+    @include md{
+        margin-bottom: 80px;
+    }
+}

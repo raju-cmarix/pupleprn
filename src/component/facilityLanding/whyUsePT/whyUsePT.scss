@@ -1,0 +1,52 @@
+@import "../../../assets/scss/variable.scss";
+
+.why-use-PT {
+    padding-bottom: $padding120;
+    padding-top: $padding48;
+    background-image: url(../../../assets/images/icons/why-us-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: $padding120;
+
+    .why-use-list {
+        max-width: 858px;
+        margin: auto;
+
+        ul {
+            text-align: left;
+            padding: 0;
+            list-style: none;
+            margin-bottom: $padding48;
+
+            p {
+                display: inline-block;
+                width: calc(100% - 32px);
+                vertical-align: top;
+                margin-bottom: 0;
+            }
+
+            li {
+                margin-bottom: $padding12;
+                font-weight: $fw400;
+                font-size: $ft-h5;
+                line-height: 22px;
+                color: $primary;
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $secondary;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: $padding12;
+                }
+                @include md{
+                    font-size: $ft-h6;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

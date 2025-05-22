@@ -1,0 +1,725 @@
+@import "../../assets/scss/variable.scss";
+
+.job-board {
+  padding: 100px 0;
+  font-size: $ft-h5;
+  position: relative;
+
+  .spinner-border {
+    position: relative;
+    left: 50%;
+  }
+
+  .jobboard-title {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: $ft-h5;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: $ft-h7;
+    }
+  }
+
+  .row {
+    margin-bottom: 24px;
+  }
+
+  .jobsearch {
+    display: flex;
+    align-items: center;
+
+    @include md {
+      justify-content: center;
+    }
+
+    @include sm {
+      justify-content: flex-start;
+    }
+
+    .jobsearch-btn {
+      border: 1px solid $light_gray;
+      border-radius: 30px;
+      padding: 0 10px;
+      display: flex;
+      height: 40px;
+
+      @include trans3;
+
+      &:hover {
+        border-color: $primary !important;
+
+        .zipcode-input {
+          border-color: $primary !important;
+        }
+      }
+
+      .zipcode-input {
+        border-right: 1px solid $light_gray;
+        @include trans3;
+
+        @include sm {
+          border: none;
+          padding-left: 10px;
+        }
+      }
+
+      @include sm {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      input {
+        border: none;
+        background-image: none !important;
+      }
+
+      ::placeholder {
+        font-size: $ft-h7;
+      }
+
+      >div {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        width: 180px;
+
+        @include sm {
+          height: 40px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .fi-input{
+        @include sm {
+          border: 1px solid $light_gray;
+          border-radius: 30px;
+          padding-left: 10px;
+        }
+      }
+
+      .daterange-input {
+        padding-left: 12px;
+
+        input {
+          padding-right: 0;
+
+          @include sm {
+            padding: 0 8px;
+          }
+        }
+
+        @include sm {
+          border: 1px solid $light_gray;
+          border-radius: 30px;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .jobboard-search {
+      margin-left: 10px;
+      cursor: pointer;
+
+      span {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: $primary1;
+        display: block;
+        text-align: center;
+        line-height: 38px;
+      }
+    }
+  }
+
+  .hourly {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    @include lg {
+      justify-content: start;
+      margin-top: 24px;
+    }
+
+    @include md {
+      justify-content: start;
+    }
+
+    @include sm {
+      margin-top: 115px;
+      align-items: center;
+    }
+
+    .hourly-select {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      @include sm {
+        margin-top: 70px;
+      }
+
+      .react-dropdown-select {
+        @include trans3;
+
+        &:hover {
+          border-color: $primary !important;
+        }
+      }
+
+      label {
+        font-size: $ft-h7;
+        color: $primary;
+        margin-right: 10px;
+      }
+
+      .react-dropdown-select {
+        background: $white;
+        padding: 10px !important;
+        border-radius: 30px !important;
+        width: 180px;
+        height: 40px;
+
+        @include sm {
+          width: 145px;
+        }
+
+        .react-dropdown-select-item {
+          color: $primary;
+        }
+
+        .react-dropdown-select-content {
+          color: $primary;
+        }
+      }
+
+      ::placeholder {
+        font-size: $ft-h7;
+      }
+    }
+
+    .hourly-btn {
+      span {
+        border: 1px solid $light_gray;
+        width: 40px;
+        height: 40px;
+        padding: 8px 14px;
+        border-radius: 100%;
+        margin: 0 5px;
+        cursor: pointer;
+
+        &:first-child {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:hover {
+          border-color: $light_primary;
+
+          path {
+            fill: $primary;
+          }
+        }
+
+        &.active {
+          border-color: $light_primary;
+
+          path {
+            fill: $primary;
+          }
+        }
+
+        @include sm {
+          width: 30px;
+          height: 30px;
+          padding: 1px 9px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .jobmenu-btns {
+    margin-bottom: 35px;
+    display: flex;
+
+    @include md {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      height: 40px;
+      width: 180px;
+      border-radius: 30px;
+      font-size: $ft-h7;
+      color: $primary;
+      margin-right: 10px;
+      @include trans3;
+      margin-bottom: 10px;
+
+      &:hover {
+        border-color: $primary !important;
+      }
+
+      &.active {
+        border-color: $primary !important;
+      }
+
+      @include sm {
+        max-width: 150px;
+        margin-right: 200px;
+        line-height: 1.2;
+        width: 46%;
+      }
+    }
+  }
+
+  .jobboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 20px;
+
+    .no-records {
+      width: 100%;
+    }
+
+    @include lg {
+      justify-items: center;
+    }
+
+    .card {
+      max-width: 384px;
+      width: 100%;
+      border: 1px solid $light_gray;
+      padding: 24px;
+      border-radius: 40px;
+      background-color: $white;
+      justify-content: space-between;
+
+      @include sm {
+        padding: 20px;
+      }
+
+      .card-header {
+        display: flex;
+        align-items: column;
+        align-items: flex-start;
+        padding: 0;
+        background-color: $white;
+        border-bottom: none;
+        margin-bottom: 20px;
+        position: relative;
+
+        h2 {
+          font-size: $ft-h5;
+          margin-left: 9px;
+          margin-bottom: 0;
+
+          @include sm {
+            font-size: $ft-h6;
+          }
+        }
+
+        h4{
+          font-size: $ft-h6;
+          margin-top: 2px;
+          margin-left: 9px;
+          margin-bottom: 0;
+
+          @include sm {
+            font-size: $ft-h7;
+          }
+
+        }
+
+        img {
+          height: 48px;
+          width: 48px;
+          border-radius: 12px;
+          font-size: 8px;
+          color: $gray;
+        }
+
+        span {
+          position: absolute;
+          right: 5px;
+          top:-10px;
+          font-weight: 800;
+          color: $white;
+          font-size: $ft-h6;
+          text-transform: uppercase;
+          background-color: #01a796;
+          padding: 5px 11px;
+          border-radius: 30px;
+        }
+
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+
+        li {
+          font-size: $ft-h7;
+          color: $gray;
+
+          span {
+            color: $primary;
+            font-weight: $fw700;
+          }
+
+          margin-bottom: 10px;
+        }
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        border: none;
+        padding: 0;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+
+        >div {
+          display: flex;
+
+          h3 {
+            font-size: $ft-h7;
+            font-weight: $fw700;
+            color: $primary;
+
+            h3 .hourly-rate {
+              font-size: $ft-h7;
+            font-weight: $fw700;
+            color: $primary;
+
+            }
+
+            span {
+              color: $gray;
+              font-weight: $fw400;
+            }
+
+            .strikethrough {
+              text-decoration: line-through;
+              
+            }
+
+            .includes {
+              font-size: 10px;
+              margin: 0px 0 0 97px;
+              font-weight: 400;
+            }
+          }
+
+          svg {
+            margin-right: 10px;
+          }
+          .rate {
+  h3 {
+    display: flex;
+    align-items: center;
+
+    .rate-container {
+      display: flex;
+      align-items: center;
+      // gap: 10px;
+
+      .hourly-rate {
+        &.strikethrough {
+          text-decoration: line-through 2px solid red !important;
+        }
+      }
+    }
+  }
+}
+
+.admin-rate {
+  display: block;
+  font-weight: bold;
+  // margin-bottom: 5px;
+}
+        }
+      }
+
+      .card-btn {
+        display: flex;
+        justify-content: center;
+        column-gap: 25px;
+
+        .pt-btn {
+          height: 40px;
+          font-size: $ft-h7;
+          font-weight: $fw700;
+          min-width: 150px;
+
+          @include sm {
+            min-width: 115px;
+          }
+        }
+
+        .spinner-border {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+.hourly-modal {
+  .modal-content {
+    .modal-body {
+      padding: auto;
+
+      p {
+        font-size: $ft-h7;
+        margin-bottom: 20px;
+      }
+
+      .price-range-slider {
+        height: 4px;
+        border-radius: 4px;
+        background: $light_secondary;
+
+        .range-slider__thumb {
+          background-color: $secondary;
+          width: 6px;
+          height: 6px;
+          border-radius: 4px;
+        }
+
+        .range-slider__range {
+          background-color: $secondary;
+        }
+      }
+
+      .hourlymodal-btn {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        margin-top: 45px;
+
+        button {
+          height: 40px;
+          width: 136px;
+          min-width: 136px;
+          font-size: $ft-h7;
+        }
+      }
+    }
+  }
+}
+.clinician-modal {
+  .modal-body {
+    .clinicianPT {
+      // display: flex;
+      // column-gap: 70px;
+      // row-gap: 20px;
+      flex-wrap: wrap;
+      max-width: 170px;
+      margin: 0 auto;
+      column-count: 2;
+
+      .pt-radio {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-size: $ft-h7;
+        color: $gray;
+      }
+    }
+
+    .Facility {
+      flex-wrap: wrap;
+      max-width: 223px;
+      margin: 0 auto;
+      column-count: 2;
+
+      .pt-radio {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-size: $ft-h7;
+        color: $gray;
+      }
+    }
+  }
+
+  .clinicianmodal-btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 45px;
+
+    button {
+      height: 40px;
+      width: 136px;
+      min-width: 136px;
+      font-size: $ft-h7;
+    }
+  }
+}
+
+.experience-modal {
+  .modal-body {
+    .experiencePT {
+      margin-left: auto;
+      max-width: 250px;
+      column-count: 2;
+      margin: 0 auto;
+
+      .pt-radio {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-size: $ft-h7;
+        color: $gray;
+      }
+    }
+  }
+
+  .experiencemodal-btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 45px;
+
+    button {
+      height: 40px;
+      width: 136px;
+      min-width: 136px;
+      font-size: $ft-h7;
+    }
+  }
+}
+
+.distance-modal {
+  width: '80% !important';
+  .modal-body {
+    padding: auto;
+    margin-right: 15px;
+    
+    p {
+      font-size: $ft-h7;
+      width: 180px;
+      font-size: $ft-h7;
+      color: $primary;
+      @include trans3;
+
+      @include sm {
+        max-width: 150px;
+        margin-right: 200px;
+        line-height: 1.2;
+        width: 46%;
+        margin-bottom: 10px;
+      }
+      
+    }
+
+    .slider{
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      @include sm {
+        margin-bottom: 10px;
+      }
+
+      
+      span{
+        font-size: 12px;
+        // margin: 0 10px; 
+        width: '10% !important';
+    }
+
+    .distance-range-slider {
+      height: 4px;
+      width: '50%';
+      z-index: 0;
+      border-radius: 4px;
+      background: $light_secondary;
+      .range-slider__thumb {
+        background-color: $secondary;
+        width: 20px;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .range-slider__range {
+        background-color: $secondary;
+      }
+    }
+    }
+    
+    }
+ 
+  }
+
+  .distancemodal-btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 45px;
+
+    button {
+      height: 40px;
+      width: 100px;
+      min-width: 100px;
+      font-size: $ft-h7;
+    }
+  }
+
+.thirdmodal {
+  .dashed-border {
+    margin: -7px 42px 5px auto !important;
+    width: 89% !important;
+  }
+}
+
+.days-available {
+  .react-datepicker__input-container .form-control {
+    background-image: none !important;
+  }
+
+  .signup-select {
+    label {
+      display: none;
+    }
+
+    .form-group {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .dashed-border {
+    margin-bottom: 6px !important;
+    padding: 0;
+  }
+}
+
+.modal-dialog {
+  label {
+    font-size: 12px;
+    color: #80798b;
+    line-height: 15px;
+  }
+}
+
+.job-post {
+  .includes {
+    margin-left: 100px;
+    font-size: 10px;
+  }
+}

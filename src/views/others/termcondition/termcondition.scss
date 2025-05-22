@@ -1,0 +1,155 @@
+@import "../../../assets/scss/variable.scss";
+
+.termcondition-section {
+  padding: 100px 0;
+  font-size: $ft-h5;
+  font-weight: $fw700;
+
+  .title {
+    text-align: left;
+
+    @include md {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: $ft-h5;
+      font-weight: $fw700;
+      color: $primary;
+
+      @include md {
+        font-size: $ft-h6;
+      }
+    }
+  }
+
+  .termcondition-content {
+    text-align: justify;
+    @include md {
+      font-size: $ft-h6;
+    }
+
+    .condition-box {
+      margin-bottom: 40px;
+
+      .condition-subtitle {
+        color: $primary;
+        margin-bottom: 20px;
+      }
+
+      .claim,
+      .regard {
+        li {
+          list-style-type: inherit;
+        }
+      }
+
+      p {
+        font-weight: $fw400;
+
+        a {
+          text-decoration: none;
+          font-size: $ft-h5;
+          font-weight: $fw700;
+          color: $primary;
+          @include trans5;
+
+          @include md {
+            font-size: $ft-h6;
+          }
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+
+      ol,
+      ul {
+        margin-bottom: 40px;
+      }
+
+      li {
+        margin-bottom: 15px;
+        font-size: $ft-h5;
+        font-weight: $fw700;
+        color: $primary;
+
+        @include md {
+          font-size: $ft-h6;
+        }
+
+        &::marker {
+          color: $primary;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: $ft-h5;
+          font-weight: $fw700;
+          color: $primary;
+          @include trans5;
+          word-break: break-word;
+
+          @include md {
+            font-size: $ft-h6;
+          }
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+
+      ol {
+        ul,
+        ol {
+          margin-bottom: 0;
+          font-size: $ft-h5;
+          font-weight: $fw400;
+          color: $gray;
+
+          @include md {
+            font-size: $ft-h6;
+          }
+
+          li {
+            font-size: $ft-h5;
+            font-weight: $fw400;
+            color: $gray;
+
+            @include md {
+              font-size: $ft-h6;
+            }
+
+            &::marker {
+              color: $secondary;
+            }
+          }
+        }
+
+        ul li {
+          list-style: disc;
+        }
+      }
+
+      .register {
+        margin-bottom: 0;
+
+        li {
+          font-size: $ft-h5;
+          font-weight: $fw400;
+          color: $gray;
+
+          @include md {
+            font-size: $ft-h6;
+          }
+
+          &::marker {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

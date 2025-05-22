@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.privacy-section {
+  padding: 100px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.privacy-section .title {
+  text-align: left;
+}
+.privacy-section .title h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+}
+.privacy-section .privacy-content .privacycontentbox {
+  margin-bottom: 40px;
+}
+.privacy-section .privacy-content .privacycontentbox .privacy-subtitle {
+  color: #382768;
+  margin-bottom: 20px;
+}
+.privacy-section .privacy-content .privacycontentbox p {
+  font-weight: 400;
+}
+.privacy-section .privacy-content .privacycontentbox p a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+  transition: 0.5s ease-in-out;
+}
+.privacy-section .privacy-content .privacycontentbox p a:hover {
+  color: #01A796;
+}
+.privacy-section .privacy-content .privacycontentbox ol,
+.privacy-section .privacy-content .privacycontentbox ul,
+.privacy-section .privacy-content .privacycontentbox li {
+  font-weight: 400;
+  color: #80798B;
+  margin-bottom: 15px;
+}
+.privacy-section .privacy-content .privacycontentbox .privacy-residents li {
+  margin-bottom: 0;
+}
+.privacy-section .privacy-content .privacycontentbox .privacy-residents p {
+  margin-bottom: 0;
+}
+.privacy-section .privacy-content .privacycontentbox.rights-choices ul,
+.privacy-section .privacy-content .privacycontentbox.rights-choices ol {
+  padding-left: 20px;
+}
+.privacy-section .privacy-content .privacycontentbox.rights-choices ul li,
+.privacy-section .privacy-content .privacycontentbox.rights-choices ol li {
+  font-size: 18px;
+  font-weight: 700;
+  color: #382768;
+}
+.privacy-section .privacy-content .privacycontentbox.rights-choices ul li::marker,
+.privacy-section .privacy-content .privacycontentbox.rights-choices ol li::marker {
+  color: #382768;
+}
+.privacy-section .privacy-content .privacycontentbox.rights-choices ul ul li,
+.privacy-section .privacy-content .privacycontentbox.rights-choices ol ul li {
+  font-weight: 400;
+  color: #80798B;
+  list-style: disc;
+}
+.privacy-section .privacy-content .privacycontentbox.rights-choices .provider li {
+  font-weight: 400;
+  color: #80798B;
+}/*# sourceMappingURL=privacypolicy.css.map */

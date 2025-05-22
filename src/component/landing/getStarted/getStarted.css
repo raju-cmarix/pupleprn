@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.get-started-main {
+  margin-bottom: 120px;
+}
+.get-started-main.without-insta {
+  background-image: url(../../../assets/images/icons/getstrated.svg);
+  background-size: auto;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .get-started-main.without-insta .get-started-insta .row {
+    flex-wrap: wrap;
+  }
+  .get-started-main.without-insta .get-started-insta .row .col {
+    flex: inherit;
+    width: 33.33%;
+  }
+}
+@media (max-width: 575px) {
+  .get-started-main.without-insta .get-started-insta .row .col {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .get-started-main.without-insta {
+    padding-bottom: 60px;
+  }
+}
+.get-started-main h4 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.get-started-main .without-insta-box {
+  position: relative;
+  padding-left: 24px;
+  padding-top: 60px;
+  z-index: 1;
+}
+.get-started-main .without-insta-box span {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  text-transform: lowercase;
+  color: #D0EDEB;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}/*# sourceMappingURL=getStarted.css.map */

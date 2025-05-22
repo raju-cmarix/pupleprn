@@ -1,0 +1,239 @@
+@import "../../../assets/scss/variable.scss";
+
+.footer-section {
+  padding-top: 50px;
+  .logosection {
+    display: flex;
+    @include md {
+      margin-bottom: 20px;
+    }
+    @include sm {
+      display: block;
+    }
+    .footerlogo {
+      width: 70%;
+      @include sm {
+        // width: 157px;
+        margin: auto 0 30px 0;
+      }
+
+      > div {
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: $primary;
+        display: inline-block;
+        font-size: 18px;
+        border: 1px solid $light_gray;
+        border-radius: 2px;
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+        line-height: 19px;
+        text-align: center;
+        cursor: pointer;
+        @include trans3;
+        svg {
+          @include trans3;
+        }
+      }
+
+      a {
+        font-size: 12px;
+        text-decoration: none;
+        color: $gray;
+        @include trans3;
+
+        &:hover {
+          color: $primary;
+        }
+        &:hover span {
+          background-color: $primary;
+          border-color: $primary;
+
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .cities-name {
+      width: 100%;
+      @include lg {
+        width: 100% !important;
+      }
+      @include sm {
+        width: 100% !important;
+        margin-right: auto;
+      }
+      h3 {
+        font-size: 12px;
+      }
+
+      .cities-list {
+        display: block;
+        max-width: 500px;
+
+        li {
+          width: 33.33%; // Change to 33.33% for three columns
+          float: left;
+
+          @include lg {
+            width: 33.33%; // Adjusted for large screens as well
+          }
+
+          a {
+            color: $gray;
+            text-decoration: none;
+            @include trans5;
+            font-size: 12px;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .socialicons {
+    .navbar-nav {
+      flex-direction: row;
+
+      .nav-item {
+        margin-right: 10px;
+
+        a {
+          border: 1px solid $light_gray;
+          width: 25px;
+          height: 25px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 2px;
+          display: inline-block;
+          @include trans5;
+          svg {
+            @include trans3;
+          }
+
+          &:hover {
+            background-color: $primary;
+            border-color: $primary;
+
+            path {
+              fill: $white;
+              svg {
+                @include trans3;
+              }
+
+              &:nth-child(2),
+              &:nth-child(3) {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-rt {
+    h3 {
+      font-size: 12px;
+    }
+
+    .nav-item {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: $gray;
+      text-decoration: none;
+      @include trans5;
+      font-size: 12px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .footer-menu {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      > div {
+        width: 33.33%;
+      }
+
+      .footmenu-box {
+        margin-left: auto;
+        max-width: 135px;
+        @include md {
+          margin-right: auto;
+          margin-left: 0;
+        }
+        .aboutmenu-list {
+          margin-right: 10px;
+          .nav-item {
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .footercopyright-section {
+    background-color: $light_secondary;
+    padding: 13px 0 9px;
+    margin-top: 15px;
+
+    .footer-copy {
+      display: flex;
+      align-items: center;
+      font-weight: $fw700;
+      font-size: 12px;
+      justify-content: space-between;
+      @include sm {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @include md {
+        font-size: 11px;
+      }
+
+      p {
+        color: $primary;
+        margin: 0;
+        @include md {
+          margin-bottom: 3px;
+        }
+      }
+
+      a {
+        color: $primary;
+        @include trans5;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      .privacy-term {
+        flex-direction: row;
+
+        .nav-item {
+          margin-left: 50px;
+          @include md {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../../assets/scss/variable.scss";
+
+// landing-main-content
+.landing-main-head {
+  padding: 175px 0 380px;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url(../../../assets/images/icons/main-bg.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .landing-main-img {
+    svg {
+      max-width: 100%;
+    }
+  }
+  .landing-main-content {
+    h1 {
+      font-weight: $fw700;
+      font-size: $ft-h1;
+      line-height: 49px;
+      color: $primary;
+      margin-bottom: 24px;
+      span {
+        color: $secondary;
+        display: block;
+      }
+      @include md {
+        font-size: $ft-h2;
+        line-height: normal;
+      }
+    }
+    p {
+      font-weight: $fw400;
+      font-size: $ft-h5;
+      line-height: 22px;
+      color: $gray;
+      margin-bottom: 48px;
+      @include md {
+        font-size: $ft-h6;
+        line-height: normal;
+        margin-bottom: $padding24;
+      }
+    }
+    .landing-btns {
+      .pt-btn {
+        font-size: 16px;
+
+        &:hover {
+          color: $white;
+        }
+
+        @include md {
+          font-size: $ft-h7;
+          min-width: 136px;
+        }
+      }
+    }
+  }
+  @include lg {
+    padding: 120px 0 150px;
+    .landing-main-img {
+      margin-bottom: $padding24;
+    }
+    text-align: center;
+  }
+  @include md {
+    padding-bottom: 80px;
+  }
+}

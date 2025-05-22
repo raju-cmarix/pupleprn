@@ -1,0 +1,64 @@
+@import "../../../assets/scss/variable.scss";
+
+.launch-main{
+    &.facility-launch{
+        background-image: url(../../../assets/images/icons/launch-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 148px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: $padding120;
+        svg{
+            margin-bottom: 0;
+        }
+        .title{
+            h2{
+                span{
+                    text-transform: none;
+                }
+            }
+        }
+        ul{
+            text-align: left;
+            padding: 0 15px;
+            max-width: 541px;
+            margin-bottom: 0;
+            li{
+                width:50%;
+                padding-right: 6px;
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: $padding12;
+                span{
+                    width: 20px;
+                    height: 20px;   
+                    border-radius: 50%;
+                    background-color: $secondary;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: $padding12;
+                }
+                &:nth-child(2n){
+                    padding-right: 0;
+                    padding-left: 6px;
+                }
+                @include sm{
+                    width: 100%;
+                    padding: 0 !important;
+                }
+            }
+        }
+        a{
+            margin-top: 48px;
+        }
+        @include md{
+            padding: $padding60 0;
+            margin-bottom: 80px;
+        }
+    }
+}

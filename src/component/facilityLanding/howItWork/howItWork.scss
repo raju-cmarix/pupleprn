@@ -1,0 +1,68 @@
+@import "../../../assets/scss/variable.scss";
+
+.get-started-main {
+    margin-bottom: 120px;
+
+    &.how-work-facility {
+        .title{
+            padding-top: 100px;
+        }
+        .get-started-content {
+            justify-content: center;
+            // margin-top: 110px;
+            background-color: $light_secondary2;
+            border-radius: 40px;
+            padding: 45px 0;
+
+            .postashift-img {
+                text-align: center;
+
+                @include md{
+                    margin-bottom: 40px;
+                }
+            }
+
+            .whats-box {
+                h5 {
+                    font-size: 26px;
+                    margin-bottom: 30px;
+                    text-align: left;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    p {
+                        display: inline-block;
+                        width: calc(100% - 42px);
+                        vertical-align: top;
+                        margin-bottom: 0;
+                        font-size: 22px;
+
+                        @include md {
+                            font-size: $ft-h5;
+                        }
+                    }
+
+                    .list-none {
+                        list-style: none;
+                        margin-bottom: 25px;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        span {
+                            background-color: $primary;
+                            height: 30px;
+                            width: 30px;
+                            font-size: $ft-h4;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

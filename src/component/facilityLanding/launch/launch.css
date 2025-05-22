@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.launch-main.facility-launch {
+  background-image: url(../../../assets/images/icons/launch-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 148px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.launch-main.facility-launch svg {
+  margin-bottom: 0;
+}
+.launch-main.facility-launch ul {
+  text-align: left;
+  padding: 0 15px;
+  max-width: 541px;
+  margin-bottom: 0;
+}
+.launch-main.facility-launch ul li {
+  width: 50%;
+  padding-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.launch-main.facility-launch ul li span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #01A796;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.launch-main.facility-launch ul li:nth-child(2n) {
+  padding-right: 0;
+  padding-left: 6px;
+}
+@media (max-width: 575px) {
+  .launch-main.facility-launch ul li {
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+.launch-main.facility-launch button {
+  margin-top: 48px;
+}
+@media (max-width: 767px) {
+  .launch-main.facility-launch {
+    padding: 60px 0;
+    margin-bottom: 80px;
+  }
+}/*# sourceMappingURL=launch.css.map */

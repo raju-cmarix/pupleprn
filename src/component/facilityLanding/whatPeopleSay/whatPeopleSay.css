@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Font Styles|Variable */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1920px !important;
+  }
+}
+
+.what-people-say {
+  margin-bottom: 120px;
+}
+.what-people-say.facility .title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.what-people-say.facility .title h2 {
+  justify-content: center;
+}
+.what-people-say.facility .facility-benefits {
+  max-height: 455px;
+  overflow: auto;
+  border-radius: 40px;
+}
+.what-people-say.facility .facility-benefits::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #F2F8F8;
+}
+.what-people-say.facility .facility-benefits::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F2F8F8;
+}
+.what-people-say.facility .facility-benefits::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #01a796;
+}
+.what-people-say.facility .facility-benefits .facility-benefit-box {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  background: #F2F8F8;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  width: calc(100% - 12px);
+}
+.what-people-say.facility .facility-benefits .facility-benefit-box:first-child {
+  border-radius: 40px 40px 12px 12px;
+}
+.what-people-say.facility .facility-benefits .facility-benefit-box:last-child {
+  border-radius: 12px 12px 40px 40px;
+  margin-bottom: 0;
+}
+.what-people-say.facility .facility-benefits .facility-benefit-box svg {
+  margin-right: 12px;
+  width: 36px;
+  height: 36px;
+}
+.what-people-say.facility .facility-benefits .facility-benefit-box p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #382768;
+  width: calc(100% - 48px);
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .what-people-say.facility .facility-benefits .facility-benefit-box p {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+@media (max-width: 767px) {
+  .what-people-say.facility .facility-benefits .facility-benefit-box {
+    padding: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .what-people-say.facility .reverse {
+    flex-direction: column-reverse;
+  }
+  .what-people-say.facility .reverse img {
+    margin-bottom: 24px;
+  }
+}/*# sourceMappingURL=whatPeopleSay.css.map */

@@ -1,0 +1,113 @@
+@import "../../assets/scss/variable.scss";
+
+.about-head.contactus {
+    padding: $padding120 $padding12;
+    background-image: url(../../assets/images/icons/about-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: $padding60;
+
+    h1 {
+        font-weight: $fw700;
+        font-size: 48px;
+        line-height: 59px;
+        color: $primary;
+
+        span {
+            color: $secondary;
+        }
+        @include md{
+            font-size: 40px;
+        }
+        @include sm{
+            font-size: 32px;
+        }
+    }
+
+    .breadcrumb {
+        a {
+            font-weight: $fw500;
+            font-size: $ft-h5;
+            line-height: 22px;
+            color: $primary;
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: $fw700;
+            font-size: $ft-h5;
+            line-height: 22px;
+            color: $secondary;
+            margin-left: 5px;
+        }
+    }
+    @include md{
+        padding: $padding60 $padding12;
+    }
+}
+.contact-bg{
+    background-image: url(../../assets/images/icons/contact-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    h1{
+        font-weight: $fw700;
+        font-size: 48px;
+        line-height: 59px;
+        text-transform: capitalize;
+        color: $primary;
+        span{
+            color: $secondary;
+        }
+        @include lg{
+            font-size: $ft-h1;
+        }
+        @include md{
+            font-size: $ft-h2;
+        }
+    }
+    p{
+        font-weight: $fw500;
+        font-size: $ft-h5;
+        line-height: 22px;
+        color: $gray;
+        @include md{
+            font-size: $ft-h6;
+        }
+    }
+    .contact-form{
+        padding: 40px;
+        background: $light_secondary2;
+        border-radius: 40px;
+        max-width: 560px;
+        margin-left: auto;
+        .form-group{
+            max-width: inherit;
+            .mb-3{
+                margin-bottom: 0 !important;
+            }
+            input.form-control{
+                max-height: 40px;
+            }
+        }
+        @include md{
+            padding: $padding24;
+        }
+        .textarea{
+            textarea{
+                &.required{
+                    border: 1px solid #ea5455;
+                }
+            }
+        }
+    }
+    @include lg{
+        background-position: top left;
+        .contact-image{
+            text-align: center;
+            margin-bottom: $padding24;
+        }
+        .contact-form{
+            margin: 0 auto;
+        }
+    }
+}

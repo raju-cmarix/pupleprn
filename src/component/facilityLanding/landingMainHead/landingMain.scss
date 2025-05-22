@@ -1,0 +1,86 @@
+@import "../../../assets/scss/variable.scss";
+
+// landing-main-content
+.landing-main-head {
+  padding: 175px 0 380px;
+  position: relative;
+
+  @include lg{
+    padding-bottom: 80px;
+  }
+
+  &::before {
+    content: '';
+    background-image: url(../../../assets/images/icons/main-bg.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include lg {
+      right: 0;
+    }
+  }
+
+  .landing-main-img {
+    @include lg {
+      margin-bottom: 40px;
+    }
+
+    svg {
+      max-width: 100%;
+    }
+  }
+
+  .landing-main-content {
+    h1 {
+      font-weight: $fw700;
+      font-size: $ft-h1;
+      line-height: 49px;
+      color: $primary;
+      margin-bottom: 24px;
+
+      span {
+        color: $secondary;
+        display: block;
+      }
+
+      @include sm {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    p {
+      font-weight: $fw400;
+      font-size: $ft-h5;
+      line-height: 22px;
+      color: $gray;
+      margin-bottom: 48px;
+    }
+
+    @include lg{
+      text-align: center;
+    }
+  }
+
+  .landing-btns {
+    .pt-btn {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      line-height: 60px;
+      min-width: 188px;
+      font-size: 16px;
+      &:hover {
+        color: $white;
+      }
+
+      @include md {
+        line-height: 40px;
+      }
+    }
+  }
+}

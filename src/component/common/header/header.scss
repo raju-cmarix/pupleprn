@@ -1,0 +1,178 @@
+@import "../../../assets/scss/variable.scss";
+
+//header
+.landing-navbar{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    .navbar{
+        .container-fluid{
+            padding: 0;
+        }
+        .navbar-collapse{
+          
+          @include trans3();
+          .navbar-nav{
+            li.nav-item {
+              a {
+                font-weight: $fw400;
+                font-size: $ft-h6;
+                line-height: 17px;
+                text-align: center;
+                color: $gray;
+                text-decoration: none;
+                display: inline-block;
+                padding: $padding6 $padding12;
+                margin: 0px 12px;
+                @include trans3();
+                &:hover{
+                  color: $secondary;
+                  font-weight: $fw700;
+                }
+              }
+              &.active{
+                a{
+                  font-weight: $fw700;
+                  color: $secondary;
+                }
+              }
+            }
+          }
+          .nav-right-side{
+            a{
+              &:last-child{
+                margin-left: 20px;
+              }
+            }
+          }
+          @include md{
+            position: fixed;
+            top: -100%;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-color: $light_secondary1;
+            &.show{
+              top: 0;
+            }
+            .navbar-nav{
+              position: relative;
+              text-align: center;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              button{
+                position: absolute;
+                top: 12px;
+                right: 12px;
+              }
+              li.nav-item a{
+                color: $white;
+                font-size: $ft-h4;
+                font-weight: $fw600;
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+      .dropdown{
+        display: inline-block;
+        margin-left: 20px;
+        button{
+          padding: 0 !important;
+          background-color: transparent !important;
+          border: 0 !important;
+          outline: none !important;
+        }
+        #header-menu{
+          padding: $padding12;
+          box-shadow: 0px 0px 20px rgba(128, 121, 139, 0.2);
+          border-radius: 10px;
+          border: 0;
+          margin-top: $padding12;
+          a{
+            font-weight: $fw400;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: $padding12;
+            color: $gray;
+            &:last-child{
+              margin-bottom: 0;
+              margin-left: 0;
+            }
+            &.login-logout{
+              color: $secondary;
+              font-weight: $fw700;
+              &:hover{
+                color: $dark_secondary;
+                background-color: transparent;
+              }
+            }
+          }
+          a{
+            text-decoration: none;
+            color: $gray;
+            display: block;
+            font-weight: $fw500;
+          }
+        }
+      }
+}
+html .popover{
+  background-color: transparent;
+  border: 0;
+  max-width: inherit;
+}
+#notification{
+  margin-top: $padding32;
+  background-color: $white;
+  box-shadow: 0px 0px 20px rgba(128, 121, 139, 0.2);
+  border-radius: 10px;
+  + span.arrow.popover-arrow{
+    display: none;
+  }
+  .popover-body{
+    padding: 0;
+  }
+  .notificatin-list{
+    ul{
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li{
+        display: flex;
+        padding-bottom: $padding12;
+        border-bottom: 1px dashed $light_gray;
+        padding: $padding12;
+        align-items: center;
+        p{
+          min-width: 250px;
+          margin-right: 42px;
+          margin-bottom: 0;
+          line-height: 15px;
+          font-size: $ft-h7;
+          @include sm{
+            min-width: 200px;
+            margin-right: 8px;
+          }
+        }
+        a{
+          color: $primary !important;
+          text-decoration: underline !important;
+          font-weight: 700;
+          &:hover{
+            color: $primary1 !important;
+          }
+        }
+        &.active{
+          background-color: $light_secondary;  
+        }
+      }
+    }
+  }
+}
+
+  

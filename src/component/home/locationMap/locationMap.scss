@@ -1,0 +1,75 @@
+@import "../../../assets/scss/variable.scss";
+
+.purple-location {
+  background-image: url(../../../assets/images/icons/map-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $padding120 0;
+  margin-bottom: $padding120;
+
+  .purple-location-content {
+    text-align: center;
+    padding: 0px $padding24;
+    p {
+      color: $primary;
+      font-weight: $fw500;
+    }
+    .location-input {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .form-group {
+      width: calc(25% - 12px);
+      display: inline-block;
+      margin-right: 12px;
+      max-width: 480px;
+      text-align: left;
+
+      &:last-child {
+        margin-left: 12px;
+        margin-right: 0;
+        .input-icon {
+          input {
+            padding-left: $padding48;
+          }
+        }
+      }
+
+      .input-icon {
+        position: relative;
+        input {
+          padding-left: 36px;
+          height: 60px;
+          border-radius: 12px;
+          background: $white;
+          border: 1px solid $light_gray;
+          @include sm {
+            height: 48px;
+          }
+          &.required {
+            border: 1px solid #ea5455;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: 14px;
+        }
+      }
+      @include sm {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: $padding12;
+      }
+    }
+  }
+  @include md {
+    padding: $padding60 0;
+    margin-bottom: 80px;
+  }
+}

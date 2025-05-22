@@ -1,0 +1,32 @@
+@import "../../../assets/scss/variable.scss";
+
+.wellicon {
+  position: relative;
+
+  svg {
+    outline: none;
+  }
+
+  span {
+    background-color: $danger;
+    width: 24px;
+    height: 23px;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    color: $white;
+    font-weight: $fw600;
+    font-size: $ft-h7;
+    line-height: 23px;
+    position: absolute;
+    top: -12px;
+    right: -13px;
+
+    &.three-digits {
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      top: -16px;
+    }
+  }
+}

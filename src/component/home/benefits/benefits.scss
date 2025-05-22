@@ -1,0 +1,54 @@
+@import "../../../assets/scss/variable.scss";
+
+.benefits-main{
+    margin-top: -80px;
+    margin-bottom: 120px;
+    @include lg {
+        margin-top: 0px;
+    }
+    .row{
+        align-items: center;
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+            @include lg{
+                flex-direction: column-reverse;
+            }
+        }
+        &.reverse{
+            @include lg{
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    .benefits-img{
+        svg{
+            max-width: 100%;
+        }
+        @include lg{
+            text-align: center !important;
+        }
+    }
+    .benefits-text{
+        h5{
+            font-size: $ft-h5;
+            line-height: 22px;
+            margin-bottom: 24px;
+        }
+        ul{
+            padding-left: 18px;
+            li{
+                font-size: $ft-h5;
+                line-height: 22px;
+                color: $gray;
+                margin-bottom: 12px;
+                &::marker{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    @include md{
+        margin: 80px 0
+    };
+}

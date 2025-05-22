@@ -1,0 +1,26 @@
+@import "../../../assets/scss/variable.scss";
+
+.landing-contactus{
+    .title{
+        h2{
+            justify-content: flex-start;
+        }
+        p{
+            text-align: left;
+            margin-left: 0;
+        }
+    }
+    .contact-form{
+        padding: $padding48;
+        background-color: $light_secondary2;
+        margin-bottom: $padding120;
+        border-radius: 40px;
+        @include md{
+            padding: $padding24;
+            margin-bottom: 80px;
+            .mb-48{
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
